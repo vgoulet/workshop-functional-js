@@ -9,8 +9,8 @@ describe('Function transformCheckpoint', function() {
     expect(transformCheckpoint()).to.be.false;
   });
 
-  it('Function transformCheckpoint is mutated with parameter with the function transformCheckpoint', function() {
-    expect(transformCheckpoint()).to.eql(transformCheckpoint());
+  it('Function transformCheckpoint input have to output an array', function() {
+    expect(transformCheckpoint(checkpoint.serviceUuids)).to.eql(['abdc']);
   });
 
 });

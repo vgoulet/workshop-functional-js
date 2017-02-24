@@ -119,7 +119,24 @@ let getCheckpoints = () => [
     rssi: -53,
     services: null,
     state: 'disconnected'
-  }
+  },
+  {
+  id: 'whataw0nd3rful1d',
+  uuid: 'whataw0nd3rful1d',
+  address: 'unknown',
+  addressType: 'unknown',
+  connectable: true,
+  advertisement: {
+    localName: undefined,
+    txPowerLevel: undefined,
+    manufacturerData: undefined,
+    serviceData: [],
+    serviceUuids: [ 'abcd' ]
+  },
+  rssi: -66,
+  services: null,
+  state: 'outofcontrol'
+}
 ];
 
 module.exports = {
