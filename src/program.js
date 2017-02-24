@@ -17,32 +17,13 @@ let calculateDistanceWithRssi = rssi => {
   }
 };
 
-// let transformCheckpoint = (checkpoint) => {
-//   if (checkpoint) {
-//     // Get back essential properties
-//     checkpoint.serviceData = checkpoint.advertisement.serviceData;
-//     checkpoint.serviceUuids = checkpoint.advertisement.serviceUuids;
-//     // Transform data about distance
-//     checkpoint.distance = calculateDistanceWithRssi(checkpoint.rssi);
-//     // Clean uninteresting properties
-//     delete checkpoint.id;
-//     delete checkpoint.address;
-//     delete checkpoint.addressType;
-//     delete checkpoint.advertisement;
-//     delete checkpoint.rssi;
-//     delete checkpoint.services;
-//     // Everything is ok
-//     return true;
-//   } else {
-//     return false;
-//   }
-// };
+
 
 let transformCheckpoint = (checkpoint) => {
   if (checkpoint) {
     // Get back essential properties
-    checkpoint.serviceData = checkpoint.advertisement.serviceData;
-    checkpoint.serviceUuids = checkpoint.advertisement.serviceUuids;
+    checkpoint.serviceData = [];
+    checkpoint.serviceUuids = [];
     // Transform data about distance
     checkpoint.distance = -1.0;
     // Clean uninteresting properties
