@@ -25,7 +25,7 @@ let transformCheckpoint = (checkpoint) => {
     checkpoint.serviceData = [];
     checkpoint.serviceUuids = [];
     // Transform data about distance
-    checkpoint.distance = -1.0;
+    checkpoint.distance = -1.0*(checkpoint.rssi);
     // Clean uninteresting properties
     delete checkpoint.id;
     delete checkpoint.address;
@@ -44,6 +44,9 @@ let transformCheckpoint = (checkpoint) => {
 
 
 let showCheckpoint = (checkpoint, index) => {
+  _.map(index,function(index){
+    return showCheckpoint.index
+  })
   console.log(chalk.green('CHECKPOINT'), chalk.yellow(index + 1));
   for (var property in checkpoint) {
     if (checkpoint.hasOwnProperty(property)) {

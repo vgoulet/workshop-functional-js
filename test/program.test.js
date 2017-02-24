@@ -10,7 +10,7 @@ describe('Function transformCheckpoint', function() {
   });
 
   it('Function transformCheckpoint input have to output an array', function() {
-    expect(transformCheckpoint(checkpoint.serviceUuids)).to.eql(['abdc']);
+    expect(transformCheckpoint(checkpoint.serviceUuids)).to.equal(['abdc']);
   });
 
 });
